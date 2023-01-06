@@ -22,9 +22,8 @@
     </div>
     <% } else {%>
     <div class="wrapper success">
-      <!-- <div class="icon"></div> -->
-      <h4>Ready for download!</h4>
-      <p>Download link will expire in 24 hours after it's shared for the first time.</p>
+      <h4>File is Ready for download!</h4>
+     
       <a class="btn" href="<%= downloadLink %>">Download (<%= parseInt(size/1000) %> KB) </a>
       <% }%>
     </div>

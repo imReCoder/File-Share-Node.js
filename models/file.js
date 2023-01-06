@@ -28,12 +28,12 @@ const fileSchema = new Schema({
   s3: {
     type: Boolean,
     default: false
+  },
+  status: {
+    type: String,
+    enum: ['uploaded', 'deleted', 'expired'],
+    default: 'uploaded'
   }
-  // status: {
-  //   type: String,
-  //   enum: ['uploaded', 'deleted'],
-  //   default : 'uploaded'
-  // }
 }, {
   timestamps: true
 })
