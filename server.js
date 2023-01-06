@@ -11,7 +11,11 @@ const corsOptions = {
   origin: '*'
 }
 app.use(cors(corsOptions));
-
+//request logger
+app.use((req, res, next) => {
+  console.log(`${req.method} ${req.path} - ${req.ip}`);
+  next();
+})
 app.use(express.json())
 app.use(express.static('public'))
 app.set('views', path.join(__dirname, '/public/views'))
